@@ -1,80 +1,33 @@
-# 🧠 Simple Neural Network with PyTorch
+# Neural Network on Moons Dataset
 
-This project demonstrates a simple neural network built using PyTorch for binary classification on a synthetic dataset (`make_moons` from scikit-learn). It shows how a basic neural net can learn non-linear patterns through training.
+This project trains a simple neural network on the "moons" dataset using PyTorch.
 
----
+## Requirements
 
-##  How to Run the Project
+Install dependencies with:
 
-### 1. Clone the repository
+pip install -r requirements.txt
 
-```bash
-git clone https://github.com/mohamedASH404/testGithub.git
-cd testGithub
-```
 
-### 2. Install dependencies
+Dependencies: torch, scikit-learn, matplotlib
 
-Make sure you have Python 3.7+ installed. Then run:
+## How to run
 
-```bash
-pip install torch torchvision scikit-learn matplotlib
-```
+Run the script with:
 
-### 3. Run the model
-
-```bash
 python simple_nn.py
-```
 
-You will see training logs printed with the loss per epoch and the final test accuracy.
 
----
+It trains the model for 100 epochs, prints loss every 10 epochs, then shows accuracy and decision boundary plot.
 
-## 🧠 Model Architecture
+## Code explanation
 
-- **Input**: 2 features (from `make_moons`)
-- **Layers**:
-  - `Linear(2 → 16)` + `ReLU`
-  - `Linear(16 → 2)` (2 output classes)
-- **Loss Function**: CrossEntropyLoss
-- **Optimizer**: Adam
-- **Epochs**: 100
+- Generate 2D moons dataset with noise
+- Scale features and split train/test
+- Define a small neural network (2 input -> 16 hidden -> 2 output)
+- Use cross-entropy loss and Adam optimizer.
+- Train for 100 epochs
+- Evaluate accuracy on test set.
+- Plot decision boundary.
 
----
-
-## 📊 Results Summary
-
-Here are several observed results across different runs:
-
-| Run | Final Loss | Accuracy |
-|-----|------------|----------|
-| 1   | 0.2465     | 88.50%   |
-| 2   | 0.2438     | 94.50%   |
-| 3   | 0.1827     | 92.00%   |
-| 4   | 0.2436     | 85.50%   |
-| 5   | 0.1684     | 95.00%   |
-| 6   | 0.1942     | 92.50%   |
-| 7   | 0.2022     | 95.00%   |
-| 8   | 0.2250     | 93.00%   |
-| 9   | 0.2153     | 90.50%   |
-
-- ✅ **Average Accuracy**: ~91.72%
-- 📉 **Loss decreases steadily**, showing successful learning.
-- 🔁 Accuracy fluctuates slightly due to randomness in data splits and weight initialization.
-- ⚙️ Despite its simplicity, the model generalizes well.
-
----
-
-## 📌 Notes
-
-- You can improve performance by increasing the hidden layer size, changing the learning rate, or using additional layers.
-- Adding a **decision boundary visualization** can help you understand how the model separates the data.
-- The script is easily adaptable to other binary classification datasets.
-
----
-
-## 👨‍💻 Author
-
-**Mohamed Ait Sidi Hou**  
-GitHub: [@mohamedASH404](https://github.com/mohamedASH404)
+The code uses PyTorch for modeling and training.
