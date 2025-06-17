@@ -1,4 +1,3 @@
-```markdown
 # 🧠 Simple Neural Network with PyTorch
 
 This project demonstrates a simple neural network built using PyTorch for binary classification on a synthetic dataset (`make_moons` from scikit-learn). It shows how a basic neural net can learn non-linear patterns through training.
@@ -79,4 +78,3 @@ Here are several observed results across different runs:
 
 **Mohamed Ait Sidi Hou**  
 GitHub: [@mohamedASH404](https://github.com/mohamedASH404)
-```
