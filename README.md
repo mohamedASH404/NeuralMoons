@@ -5,18 +5,18 @@ This project trains a simple neural network on the "moons" dataset using PyTorch
 ## Requirements
 
 Install dependencies with:
-
+```bash
 pip install -r requirements.txt
-
+```
 
 Dependencies: torch, scikit-learn, matplotlib
 
 ## How to run
 
 Run the script with:
-
+```bash
 python simple_nn.py
-
+```
 
 It trains the model for 100 epochs, prints loss every 10 epochs, then shows accuracy and decision boundary plot.
 
